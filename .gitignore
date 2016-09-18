@@ -1,0 +1,15 @@
+__MACOSX
+.DS_Store
+.project
+.settings
+.classpath
+.sass-cache/
+.ssh/
+*.pyc
+.*.sw*
+*.*~
+.*~
+*.log*
+*.idea
+dist/
+node_modules/
