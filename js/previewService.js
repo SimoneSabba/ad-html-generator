@@ -4,20 +4,26 @@ myApp.service('previewService', function($http){
 	this.buildImageCss = function() {
 		return '.productImage {'+
 					'width: 200px;'+
-    				'margin: 10px;'+
-    				'padding: 10px;'+
+					'height: 120px;'+
+					'margin-left: 50px;'+
+					'text-align: center;'+
+    				'top: 10px;'+
+    				'left: 50%;'+
 				'}';
 	};
 
 	this.buildProdInfoCss = function(boxInfo) {
 		return '.productInfo {'+
 					'text-align: center;'+
+					'height: 80px;'+
 					'border: 1px solid black;'+
 					'width: 200px;'+
-    				'margin: 10px;'+
-    				'padding: 10px;'+
+    				'padding-bottom: 10px;'+
+    				'margin-left: 50px;'+
     				'background-color: '+boxInfo.bgColor+';'+
     				'color: '+boxInfo.textColor+';'+
+    				'position: absolute;'+
+    				'bottom: 0;'+
 				'}';
 	};
 
@@ -35,6 +41,9 @@ myApp.service('previewService', function($http){
 		              'height: 100%;'+
 		              'margin: 0;'+
 		              'padding: 0;'+
+		              'position: relative;'+
+		              'width: 300px;'+
+		              'height: 250px;'+
 		          '}';
 	}
 
