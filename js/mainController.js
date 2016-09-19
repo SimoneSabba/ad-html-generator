@@ -1,14 +1,13 @@
 myApp.controller('mainController', function($scope, Utilities, previewService){
 	
 	function onSuccess(response) {
-		console.log($scope.box);
-		console.log($scope.link);
-		console.log(response.data.data.products[0]);
-		console.log(previewService.buildHtml());
+		var product = response.data.data.products[0]; 
+		$scope.preview = previewService.buildHtml(product, $scope.box, $scope.link);
+		previewService.appendPreviewToIframe($scope.preview);
 	}
 
 	function onError() {
-		
+		console.log('error fetching data...');
 	}
 
 	$scope.generateAd = function() {

@@ -8,3 +8,9 @@ body > header {
     background: #311B50 url("/img/affectv-logo.png") no-repeat fixed top;
     height: 60px;
 }
+
+.preview {
+	margin: 10px;
+	width: 300px;
+	height: 250px;
+}

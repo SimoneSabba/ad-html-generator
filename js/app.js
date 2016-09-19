@@ -1,1 +1,1 @@
-var myApp = angular.module('DynamicAdHTMLGenerator', []);
+var myApp = angular.module('DynamicAdHTMLGenerator', ['ngSanitize']);
