@@ -12,6 +12,9 @@
     <script src="js/prodInfoBox/controller.js"></script>
     <script src="js/linkButtonBox/directive.js"></script>
     <script src="js/linkButtonBox/controller.js"></script>
+    <script src="js/previewIframe/directive.js"></script>
+    <script src="js/previewText/directive.js"></script>
+    <script src="js/generateButton/directive.js"></script>
     <script src="js/mainController.js"></script>
     <script src="js/utilities.js"></script>
     <script src="js/previewService.js"></script>
@@ -25,13 +28,11 @@
 		  <div class="col-md-6">
 		  	<prod-info-box></prod-info-box>
 		  	<link-button-box></link-button-box>
-            <button type="button" class="btn btn-secondary" ng-click="generateAd()"> Get Product Feed and Generate Ad</button>
+            <generate-button></generate-button>
 		  </div>
 		  <div class="col-md-6">
-          <h4>Preview</h4>
-          <iframe id="preview_iframe" class="preview"></iframe>
-          <h4>HTML</h4>
-          <textarea class="form-control preview" rows="5" ng-model="preview"></textarea>
+          <preview-iframe></preview-iframe>
+          <preview-text></preview-text>
 		  </div>
 		</div>
     </div>

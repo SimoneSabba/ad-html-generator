@@ -89,7 +89,7 @@ myApp.service('previewService', function($http){
 		return '<button onclick="onClickHandler()" id="buyNowButton">Buy Now</button>'
 	}
 
-	this.buildHtml = function(product, boxInfo, linkInfo) { console.log(boxInfo, linkInfo);
+	this.buildHtml = function(product, boxInfo, linkInfo) {
 		return '<!DOCTYPE html>'+
 		    	'<html>'+
 			      this.buildHead(boxInfo, linkInfo) +
