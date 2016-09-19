@@ -8,15 +8,27 @@ myApp.service('Utilities', function($http){
 		return /^#[0-9a-f]{3}([0-9a-f]{3})?$/i.test(hexString);
 	}
 
-	this.areValidColors = function(box, link) {
-		if (box && link) {
-			var prefix = '#';
-			return this.isValidHexColor(prefix+box.bgColor) && 
-				   this.isValidHexColor(prefix+box.textColor) && 
-				   this.isValidHexColor(prefix+link.bgColor) && 
-				   this.isValidHexColor(prefix+link.textColor);
-				}
-			return false;
+	this.isValidTextColour = function(colorString) {
+    	if (['', 'inherit', 'transparent'].indexOf(colorString) !== -1) {
+    		return false;
+    	}
+	    
+	    var image = document.createElement("img");
+	    
+	    image.style.color = "rgb(0, 0, 0)";
+	    image.style.color = colorString;
+	    if (image.style.color !== "rgb(0, 0, 0)") { 
+	    	return true; 
+	    }
+
+	    image.style.color = "rgb(255, 255, 255)";
+	    image.style.color = colorString;
+
+	    return image.style.color !== "rgb(255, 255, 255)";
+	}
+
+	this.isValidColor = function(color) {
+		return this.isValidTextColour(color) || this.isValidHexColor(color);
 	}
 
 	return this;

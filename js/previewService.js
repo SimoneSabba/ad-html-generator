@@ -16,15 +16,15 @@ myApp.service('previewService', function($http){
 					'width: 200px;'+
     				'margin: 10px;'+
     				'padding: 10px;'+
-    				'background-color: #'+boxInfo.bgColor+';'+
-    				'color: #'+boxInfo.textColor+';'+
+    				'background-color: '+boxInfo.bgColor+';'+
+    				'color: '+boxInfo.textColor+';'+
 				'}';
 	};
 
 	this.buildLinkCss = function(linkInfo) {
 		return '.productInfo > button {'+
-    				'background-color: #'+linkInfo.bgColor+';'+
-    				'color: #'+linkInfo.textColor+';'+
+    				'background-color: '+linkInfo.bgColor+';'+
+    				'color: '+linkInfo.textColor+';'+
 				'}';
 	};
 

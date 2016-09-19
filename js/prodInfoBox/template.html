@@ -1,13 +1,13 @@
 <div class="">
 	<h4><ins>Product Info Box</ins></h4>
 	<form>
-	    <div class="form-group row">
+	    <div class="form-group row" ng-class="{'has-error': showValidationMessages && !boxBgColorIsValid}">
 	      <label for="bgColorr" class="col-sm-4 col-form-label">Background color</label>
 	      <div class="col-sm-4">
 	        <input type="text" ng-model="box.bgColor" class="form-control" id="bgColor">
 	      </div>
 	    </div>
-	    <div class="form-group row">
+	    <div class="form-group row" ng-class="{'has-error': showValidationMessages && !boxTextColorIsValid}">
 	      <label for="textColor" class="col-sm-4 col-form-label">Text color</label>
 	      <div class="col-sm-4">
 	        <input type="text" ng-model="box.textColor" class="form-control" id="textColor">
