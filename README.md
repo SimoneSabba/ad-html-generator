@@ -6,6 +6,14 @@ We want to build a "Ad HTML Generator". This AngularJS app will consist of a sin
 
 After choosing the desired values and pressing the Submit button, this app should dynamically build and display the HTML code for a fixed size [Web Banner](https://en.wikipedia.org/wiki/Web_banner) (Ad), using the specified color values, together with some product information obtained from an JSON feed.
 
+### Setup instruction
+1) Install dependencies ```npm install```
+
+2) Once everything has been installed succesfully, build the application running ```gulp build```. A local server will be running on port 5000
+
+3) Open your favourite browser and go to http://localhost:5000 to display the demo.
+   
+
 ## The Ad HTML Generator App
 
 > Please note this AngularJS app can be enhanced using any additional framework/library you can consider particularly useful.
