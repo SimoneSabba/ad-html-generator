@@ -1,6 +1,6 @@
-myApp.directive('previewText', function() {
+myApp.directive('previewText', function($templateCache) {
   return {
   	restrict: 'E',
-    templateUrl: '/js/previewText/template.html'
+    template: $templateCache.get('previewText/template.html')
   };
 });

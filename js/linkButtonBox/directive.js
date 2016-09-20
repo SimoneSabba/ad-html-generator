@@ -1,7 +1,7 @@
-myApp.directive('linkButtonBox', function() {
+myApp.directive('linkButtonBox', function($templateCache) {
   return {
   	restrict: 'E',
-    templateUrl: '/js/linkButtonBox/template.html',
+    template: $templateCache.get('linkButtonBox/template.html'),
     controller: 'linkButtonBoxController'
   };
 });

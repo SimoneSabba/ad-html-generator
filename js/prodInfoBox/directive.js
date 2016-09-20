@@ -1,7 +1,7 @@
-myApp.directive('prodInfoBox', function() {
+myApp.directive('prodInfoBox', function($templateCache) {
   return {
   	restrict: 'E',
-    templateUrl: '/js/prodInfoBox/template.html',
+    template: $templateCache.get('prodInfoBox/template.html'),
     controller: 'prodInfoBoxController'
   };
 });

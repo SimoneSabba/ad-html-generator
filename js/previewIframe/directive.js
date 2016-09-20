@@ -1,6 +1,6 @@
-myApp.directive('previewIframe', function() {
+myApp.directive('previewIframe', function($templateCache) {
   return {
   	restrict: 'E',
-    templateUrl: '/js/previewIframe/template.html'
+    template: $templateCache.get('previewIframe/template.html')
   };
 });

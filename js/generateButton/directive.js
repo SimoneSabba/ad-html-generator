@@ -1,6 +1,6 @@
-myApp.directive('generateButton', function() {
+myApp.directive('generateButton', function($templateCache) {
   return {
   	restrict: 'E',
-    templateUrl: '/js/generateButton/template.html'
+    template: $templateCache.get('generateButton/template.html')
   };
 });
